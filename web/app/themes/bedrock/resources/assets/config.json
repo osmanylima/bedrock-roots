@@ -8,8 +8,8 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/app/themes/pontocriativo",
-  "devUrl": "http://pontocriativo.local",
+  "publicPath": "/app/themes/bedrock",
+  "devUrl": "https://bedrock.local",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [

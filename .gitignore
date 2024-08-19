@@ -1,16 +1,21 @@
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
+!web/app/plugins/advanced-custom-fields-pro/
 web/app/mu-plugins/*/
-web/app/themes/twentytwentytwo/
 web/app/upgrade
+web/app/uploads
 web/app/uploads/*
 !web/app/uploads/.gitkeep
-web/app/cache/*
+*.gitkeep
 
 # WordPress
-web/wp
 web/.htaccess
+public
+web/app/languages
+web/wp
+web/wp/*
+.env
 
 # Logs
 *.log
@@ -21,7 +26,33 @@ web/.htaccess
 !.env.example
 
 # Composer
-/vendor
+vendor/*
+!vendor/.gitkeep
+
+#Outros
+**/.DS_Store
+.idea
+*.log
+*.DS_Store
+web/**/*.DS_Store
+
+#Arquivos
+*.log
+/.htaccess
+/license.txt
+/readme.html
+/sitemap.xml
+
+#Wordfence
+web/wordfence-waf.php
+web/.user.ini
 
 # WP-CLI
 wp-cli.local.yml
+
+#Themes
+!web/app/themes/bedrock/
+web/app/themes/bedrock/.cache-loader
+web/app/themes/bedrock/node_modules
+web/app/themes/bedrock/vendor
+web/app/themes/twentytwentytwo

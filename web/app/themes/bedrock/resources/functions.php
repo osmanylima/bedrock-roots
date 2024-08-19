@@ -122,7 +122,6 @@ function upload_svg_files( $allowed ) {
 }
 add_filter( 'upload_mimes', 'upload_svg_files');
 
-
 /**
  * Destinado as configurações gerais,
  * configurações gerenciáveis por usuários (cliente) através da interface construída
@@ -153,4 +152,13 @@ if( function_exists('acf_add_options_page') ) {
         'icon_url'      => 'dashicons-schedule',
     ));
   }
-  
+
+add_filter('site_transient_update_plugins', 'ext_core_acf_remove_update_notification');
+// Disable ACF update notifications
+function ext_core_acf_remove_update_notification($value)
+{
+    if ($value->response) {
+        unset($value->response['advanced-custom-fields-pro/acf.php']);
+    }
+    return $value;
+}
